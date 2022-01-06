@@ -20,11 +20,16 @@ RUN         apt-get update \
                     gcc-4.8 g++-4.8 gcc-4.8-base \
                     gcc-4.7 g++-4.7 gcc-4.7-base \
                     gcc-4.6 g++-4.6 gcc-4.6-base \
-                    libgsl10-dev \
                 && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 100 \
                 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 100
+                
+RUN                apt-get install -y libgsl0-dev
 
+<<<<<<< HEAD
 COPY . .            
 RUN mkdir -p indexing_prerelease/obj/2D/data_generator/fish
 RUN mkdir -p indexing_prerelease/obj/util
 
+=======
+COPY . .             
+>>>>>>> ae9b23e6ff8fd7fd5ab94144e4b16bcb8382368a
