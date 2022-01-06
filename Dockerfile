@@ -25,11 +25,7 @@ RUN         apt-get update \
                 
 RUN                apt-get install -y libgsl0-dev
 
-<<<<<<< HEAD
 COPY . .            
 RUN mkdir -p indexing_prerelease/obj/2D/data_generator/fish
 RUN mkdir -p indexing_prerelease/obj/util
 
-=======
-COPY . .             
->>>>>>> ae9b23e6ff8fd7fd5ab94144e4b16bcb8382368a
