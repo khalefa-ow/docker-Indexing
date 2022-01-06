@@ -6,7 +6,7 @@
 
 PKG = indexing
 PKG_KIND = cmd
-CXX= g++-5
+CXX= g++-5 --std=c++11
 
 # QLEVEL for CRTree2D
 # CXXFLAGS_LOCAL := -DQLEVEL_8
