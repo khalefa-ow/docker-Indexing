@@ -20,7 +20,7 @@ RUN         apt-get update \
                     gcc-4.8 g++-4.8 gcc-4.8-base \
                     gcc-4.7 g++-4.7 gcc-4.7-base \
                     gcc-4.6 g++-4.6 gcc-4.6-base \
-                    g++-5.5 && gcc-5.5 \
+                    g++-5 && gcc-5 \
                 && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 100 \
                 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 100
                 
