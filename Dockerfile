@@ -24,4 +24,7 @@ RUN         apt-get update \
                 && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 100 \
                 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 100
 
-COPY . .             
+COPY . .            
+RUN mkdir -p indexing_prerelease/obj/2D/data_generator/fish
+RUN mkdir -p indexing_prerelease/obj/util
+
