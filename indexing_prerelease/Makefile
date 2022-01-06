@@ -355,7 +355,7 @@ ifeq "$(OSNAME)" "$(OSX_NAME)"
 	rm -f $(@D)/$(OPTLEVEL)-$(@F) ; rm -f $(@D)/$(NOPTLEVEL)-$(@F)
 	ln -s $@ $(@D)/$(OPTLEVEL)-$(@F)
 else ifeq "$(OSNAME)" "$(LINUX_NAME)"
-	$(CXX) -shared -Wl,-soname,$(@F) $(CXXFLAGS_ALL_lib) $(IMPORTS_ALL) -o $@ $^ -lc
+	$(CXX) -shared -Wl,-soname,$(@F) $(CXXFLAGS_ALL_lib)  -o $@ $^ -lc $(IMPORTS_ALL)
 	rm -f $(@D)/$(OPTLEVEL)-$(@F) ; rm -f $(@D)/$(NOPTLEVEL)-$(@F)
 	cd $(@D) && ln -s $(@F) $(OPTLEVEL)-$(@F) && cd ..
 else ifeq "$(OSNAME)" "$(WINDOWS_NAME)"
